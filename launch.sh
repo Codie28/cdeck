@@ -6,4 +6,5 @@ if ! pacman -Qs python-elgato-streamdeck; then
   sudo pacman -S python-setproctitle hidapi
 fi
 
+mkdir $dir/assets/plart
 /usr/bin/python $dir/cdeck.py
