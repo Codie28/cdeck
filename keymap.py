@@ -27,7 +27,7 @@ def get_key_style(deck, index, pushed):
             font   = FONT
             label  = "test"
             action = ""
-        case index if index >= 5 and index <= 7:
+        case index if ( index >= -oriant + 8 and index < -oriant + 10 ):
             players = subprocess.run(['playerctl', '-l'], stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.decode('UTF-8')
             players = players.split("\n")
             players = players[:-1]

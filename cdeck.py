@@ -32,7 +32,7 @@ signal.signal(signal.SIGUSR2, safe_exit)
 def key_change_callback(deck, key, pushed):
     print("Deck {} Key {} = {}".format(deck.id(), key, pushed), flush=True)
 
-    # update_key_image(deck, key, pushed)
+    update_key_image(deck, key, pushed)
 
     if pushed:
         key_style = get_key_style(deck, key, pushed)
@@ -80,7 +80,7 @@ if __name__ == "__main__":
                 if sleep_interval >= 0:
                     time.sleep(sleep_interval)
 
-        threading.Thread(target=animate, args=[30]).start()
+        threading.Thread(target=animate, args=[60]).start()
 
         deck.set_key_callback(key_change_callback)
 
